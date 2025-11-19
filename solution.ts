@@ -8,3 +8,11 @@ function formatValue(value: string | number | boolean): string | number | boolea
     return !value;
   }
 }
+
+// Problem 2 Solution
+function getLength<T>(value: string | T[]): number {
+  if (typeof value === 'string') {
+    return value.length;
+  }
+  return value.length;
+}
