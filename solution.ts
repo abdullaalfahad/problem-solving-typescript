@@ -1,4 +1,3 @@
-// Problem 1 Solution
 function formatValue(value: string | number | boolean): string | number | boolean {
   if (typeof value === "string") {
     return value.toUpperCase();
@@ -9,7 +8,7 @@ function formatValue(value: string | number | boolean): string | number | boolea
   }
 }
 
-// Problem 2 Solution
+
 function getLength<T>(value: string | T[]): number {
   if (typeof value === 'string') {
     return value.length;
@@ -17,7 +16,7 @@ function getLength<T>(value: string | T[]): number {
   return value.length;
 }
 
-// Problem 3 Solution
+
 class Person {
   name: string;
   age: number;
@@ -32,7 +31,7 @@ class Person {
   }
 }
 
-// Problem 4 Solution
+
 interface Item {
   title: string;
   rating: number;
@@ -42,7 +41,7 @@ function filterByRating(items: Item[]): Item[] {
   return items.filter(item => item.rating >= 4);
 }
 
-// Problem 5 Solution
+
 interface User {
   id: number;
   name: string;
@@ -54,7 +53,7 @@ function filterActiveUsers(users: User[]): User[] {
   return users.filter(user => user.isActive === true);
 }
 
-// Problem 6 Solution
+
 interface Book {
   title: string;
   author: string;
@@ -70,7 +69,7 @@ function printBookDetails(book: Book): void {
   );
 }
 
-// Problem 7 Solution
+
 function getUniqueValues(arr1: (number | string)[], arr2: (number | string)[]): (number | string)[] {
   const result: (number | string)[] = [];
 
@@ -93,12 +92,12 @@ function getUniqueValues(arr1: (number | string)[], arr2: (number | string)[]): 
   return result;
 }
 
-// Problem 8 Solution
+
 interface Product {
   name: string;
   price: number;
   quantity: number;
-  discount?: number; // optional % discount
+  discount?: number;
 }
 
 function calculateTotalPrice(products: Product[]): number {
