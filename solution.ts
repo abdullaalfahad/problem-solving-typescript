@@ -69,3 +69,26 @@ function printBookDetails(book: Book): void {
     }`
   );
 }
+
+// Problem 7 Solution
+function getUniqueValues(arr1: (number | string)[], arr2: (number | string)[]): (number | string)[] {
+  const result: (number | string)[] = [];
+
+  const pushUnique = (value: number | string) => {
+    let exists = false;
+    for (let i = 0; i < result.length; i++) {
+      if (result[i] === value) {
+        exists = true;
+        break;
+      }
+    }
+    if (!exists) {
+      result.push(value);
+    }
+  };
+
+  for (let v of arr1) pushUnique(v);
+  for (let v of arr2) pushUnique(v);
+
+  return result;
+}
